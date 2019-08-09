@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>上浮效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            display: inline-block;
+        }
+
+        .goods {
+            width: 50%;
+            text-align: center;
+            margin: 50px auto;
+        }
+
+        .goods:hover {
+            animation: myfirst 2s infinite;
+        }
+
+        @keyframes myfirst {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            50% {
+                transform: translate(0px, -10px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="goods">
+        <img src="./images/pic.jpg" width="200px" height="auto" />
+    </div>
+</body>
+
+</html>
