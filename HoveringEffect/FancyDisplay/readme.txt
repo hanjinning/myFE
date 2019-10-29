@@ -1,0 +1,2 @@
+适用浏览器：360、FireFox、Chrome、Opera、傲游、搜狗、世界之窗. 不支持Safari、IE8及以下浏览器。
+来源：中国站长  http://sc.chinaz.com/

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .calculator {
+            position: absolute;
+            display: block;
+            width: 218px;
+            height: 280px;
+            cursor: move; 
+        }
+    </style>
+</head>
+<body>
+<div class="calculator" id="drag">移动我</div>
+</body>
+</html>
+
+        <script>
+            window.onload = function() {
+               
+                var drag = document.getElementById('drag');
+
+            
+                drag.onmousedown = function(e) {
+                    var e = e || window.event;
+                    var diffX = e.clientX - drag.offsetLeft; 
+                    var diffY = e.clientY - drag.offsetTop;
+
+                 
+                    if(typeof drag.setCapture!='undefined'){
+                        drag.setCapture();
+                    }
+                    document.onmousemove = function(e) {
+                        var e = e || window.event; 
+                        var left=e.clientX-diffX;
+                        var top=e.clientY-diffY;                       
+                        if(left<0){
+                            //left=0;
+                        }else if(left >window.innerWidth-drag.offsetWidth){
+                            left = window.innerWidth-drag.offsetWidth;
+                            //left = window.innerWidth;
+                        }
+                        if(top<0){
+                            //top=0;
+                        }else if(top >window.innerHeight-drag.offsetHeight){
+                            top = window.innerHeight-drag.offsetHeight;
+                            //top = window.innerHeight;
+                        }                      
+                        drag.style.left = left+ 'px';
+                        drag.style.top = top + 'px';
+                    };
+                    document.onmouseup = function(e) { 
+                        this.onmousemove = null;
+                        this.onmouseup = null; 
+                        if(typeof drag.releaseCapture!='undefined'){
+                            drag.releaseCapture();
+                        }
+                    };
+                };
+            };
+        </script>

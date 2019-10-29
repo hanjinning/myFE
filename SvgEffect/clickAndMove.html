@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>svg控制移动</title>
+    <style>
+        .sport {
+            width: 60px;
+            height: 60px;
+            background-color: orange;
+            border-radius: 5px;
+            position: absolute;
+            top: 60px;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        #div1 {
+            top: 60px;
+            left: 0;
+        }
+
+        #div2 {
+            top: 150px;
+            left: 900px;
+        }
+
+        #reference {
+            width: 1px;
+            height: 260px;
+            background-color: red;
+            position: fixed;
+            top: 20px;
+            left: 450px;
+        }
+    </style>
+    <script>
+        function startMove(obj, iTarget) {
+            let timer = null; 
+            let oDiv1 = document.getElementById(obj);
+
+            clearInterval(timer); 
+            timer = setInterval(function () {
+                let iSpeed = 0;
+                let l = oDiv1.offsetLeft - iTarget;
+                iSpeed = l > 0 ? -8 : 8;
+                if (Math.abs(l) < iSpeed) { 
+                    clearInterval(timer); 
+                    oDiv1.style.left = iTarget + 'px'; 
+                } else {
+                    oDiv1.style.left = oDiv1.offsetLeft + iSpeed + 'px'; 
+                }
+            }, 30);
+
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="从左往右" onclick="startMove('div1',450)" />
+    <input type="button" value="从右往左" onclick="startMove('div2',450)" />
+    <div id="div1" class="sport">A</div>
+    <div id="div2" class="sport">B</div>
+    <div id="reference"></div>
+</body>
+
+</html>
