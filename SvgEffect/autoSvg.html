@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>svg跟随浏览器的宽度自适应</title>
+    <style>
+        #svgLine {
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+            animation-delay: 1s;
+            animation: offset 1s linear forwards;
+
+        }
+
+        #svgLine1 {
+            stroke-dasharray: 250;
+            stroke-dashoffset: 250;
+            animation-delay: .25s;
+            animation: offset 1s linear forwards;
+        }
+
+        .s0 {
+            stroke-miterlimit: 10;
+        }
+
+        @keyframes offset {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div
+        style="border:1px solid red;width:100%;background: url('../images/bg.png') 0 0 no-repeat;background-size:100% 100%;overflow-x:hidden;color: white;height: auto;">
+        <svg id="sketchpad" xmlns="http://www.w3.org/2000/svg" viewBox="0,0,1536,650" version="1.1" width="1536px"
+            height="650px" version="1.1" currentScale="0.1" style="overflow-x: hidden;">
+            <g transform="translate(450,0)">
+                <path d="m0,0 v60 h1 v-60z" stroke="#19aeb8" stroke-width="1" />
+                <circle cx="0" cy="100" r="40" stroke="white" stroke-width="4" fill="#19aeb8" />
+                <text x="-23" y="107" fill="white" font-size="24">奋斗</text>
+            </g>
+            <g transform="translate(1100,0)">
+                <path d="m0,0 v60 h1 v-60z" stroke="#19aeb8" stroke-width="1" />
+                <circle cx="0" cy="100" r="40" stroke="white" stroke-width="4" fill="#19aeb8" />
+                <text x="-23" y="107" fill="white" font-size="24">无畏</text>
+            </g>
+            <g transform="translate(1300,450)">
+                <path d="m0,140 v60 h1 v-60z" stroke="white" stroke-width="1" />
+                <circle cx="0" cy="100" r="40" stroke="#19aeb8" stroke-width="4" fill="white" />
+                <text x="-23" y="107" fill="#19aeb8" font-size="24">拼搏</text>
+            </g>
+            <g transform="translate(250,450)">
+                <path d="m0,140 v60 h1 v-60z" stroke="white" stroke-width="1" />
+                <circle cx="0" cy="100" r="40" stroke="#19aeb8" stroke-width="4" fill="white" />
+                <text x="-23" y="107" fill="#19aeb8" font-size="24">启航</text>
+            </g>
+            <g id="svgLine" transform="translate(30,20)">
+                <path class="s0" d="M250,300 L320,305 M320,305 L390,290 M390,290 L470,305 M470,305 L550,310 M550,310 L620,300
+                                        M620,300 L690,310 M690,310 L770,280 M770,280 L830,300 M830,300 L890,310 M890,310 L970,290 M970,290 L1035,300 M1035,300 L1125,290
+                                        " stroke="white" stroke-width="1" fill-opacity="0.1" />
+            </g>
+            <g id="svgLine1" transform="translate(30,20)">
+
+                <path class="s1" d="M390,290 L402,320 M402,320 L422,317 M550,310 L570,270 M570,270 L600,260"
+                    stroke="white" stroke-width="1" fill-opacity="0.1" />
+                <path class="s1" d="M690,310 L730,335 M730,335 L780,325" stroke="white" stroke-width="1"
+                    fill-opacity="0.1" />
+                <path class="s1" d="M770,280 L820,250" stroke="white" stroke-width="1" fill-opacity="0.1" />
+                <path class="s1" d="M890,310 L885,270" stroke="white" stroke-width="1" fill-opacity="0.1" />
+                <path class="s1" d="M970,290 L960,250 M960,250 L995,262" stroke="white" stroke-width="1"
+                    fill-opacity="0.1" />
+                <path class="s1" d="M1125,290 L1160,320 M1160,320 L1190,280" stroke="white" stroke-width="1"
+                    fill-opacity="0.1" />
+            </g>
+            <g transform="translate(30,20)">
+
+                <text x="298" y="200" font-size="22" fill="#fff" style="font-weight: bold;">2012</text>
+                <text x="338" y="225" font-size="14" fill="#fff">公司成立</text>
+                <text x="338" y="245" font-size="14" fill="#fff">XXXXXXXXXXXX</text>
+                <text x="338" y="265" font-size="14" fill="#fff">XXXXXXXXXXXX</text>
+                <path d="M320,305 L320,215" stroke="#19aeb8" stroke-width="2" fill-opacity="0.9" />
+                <circle cx="320" cy="215" r="7" stroke="#19aeb8" stroke-width="4" fill="#19aeb8" />
+
+
+                <text x="445" y="487" font-size="22" fill="#fff" style="font-weight: bold;">2015</text>
+                <text x="485" y="347" font-size="14" fill="#fff">XXXXXXXXXX</text>
+                <text x="485" y="364" font-size="14" fill="#fff">XXXXXXXXXXXXXX</text>
+                <text x="485" y="382" font-size="14" fill="#fff">XXXXXXXXXXXXXXXX</text>
+                <text x="485" y="398" font-size="14" fill="#fff">XXXXXXXXXXXXXXXXX</text>
+                <text x="485" y="414" font-size="14" fill="#fff">XXXXXXXXXXXXXXXXXX</text>
+                <path d="M470,305 L470,455" stroke="#fff" stroke-width="2" fill-opacity="0.9" />
+                <circle cx="470" cy="455" r="7" stroke="#fff" stroke-width="4" fill="#fff" />
+
+                <text x="595" y="135" font-size="22" fill="#fff" style="font-weight: bold;">2016</text>
+                <text x="630" y="190" font-size="14" fill="#fff">领跑者</text>
+                <text x="630" y="210" font-size="14" fill="#fff">XXXXXXXXXXXX</text>
+                <text x="630" y="230" font-size="14" fill="#fff">XXXXXXXXXXXXXX</text>
+                <circle cx="620" cy="150" r="7" stroke="#19aeb8" stroke-width="4" fill="#19aeb8" />
+                <path d="M620,150 L620,300" stroke="#19aeb8" stroke-width="2" fill-opacity="0.9" />
+
+                <text x="805" y="450" font-size="22" fill="#fff" style="font-weight: bold;">2018</text>
+                <text x="845" y="337" font-size="14" fill="#fff">XXX</text>
+                <text x="845" y="354" font-size="14" fill="#fff">XXXXXXXXXXXX</text>
+                <text x="845" y="372" font-size="14" fill="#fff">XXXXXXXXXXXX</text>
+                <text x="845" y="388" font-size="14" fill="#fff">XXXXXXXXXXXXXXXXXXXXX</text>
+                <text x="845" y="404" font-size="14" fill="#fff">XXXXXXXXX</text>
+                <path d="M830,420 L830,300" stroke="#fff" stroke-width="2" fill-opacity="0.9" />
+                <circle cx="830" cy="420" r="7" stroke="#fff" stroke-width="4" fill="#fff" />
+
+                <text x="1010" y="180" font-size="22" fill="#fff" style="font-weight: bold;">2020</text>
+                <text x="1050" y="225" font-size="14" fill="#fff">我们期待</text>
+                <text x="1050" y="245" font-size="14" fill="#fff">XXXXXXXXXXXXXXX</text>
+                <path d="M1035,300 L1035,200" stroke="#19aeb8" stroke-width="2" fill-opacity="0.9" />
+                <circle cx="1035" cy="200" r="7" stroke="#19aeb8" stroke-width="4" fill="#19aeb8" />
+
+                <circle cx="250" cy="300" r="7" fill="white" />
+                <circle cx="320" cy="305" r="10" stroke="white" stroke-width="4" fill="#19aeb8" />
+                <circle cx="390" cy="290" r="7" fill="white" />
+                <circle cx="470" cy="305" r="10" stroke="white" stroke-width="4" fill="#19aeb8" />
+                <circle cx="550" cy="310" r="7" fill="white" />
+                <circle cx="620" cy="300" r="10" stroke="white" stroke-width="4" fill="#19aeb8" />
+                <circle cx="690" cy="310" r="7" fill="white" />
+                <circle cx="770" cy="280" r="7" fill="white" />
+                <circle cx="830" cy="300" r="10" stroke="white" stroke-width="4" fill="#19aeb8" />
+                <circle cx="890" cy="310" r="7" fill="white" />
+                <circle cx="970" cy="290" r="7" fill="white" />
+                <circle cx="1035" cy="300" r="10" stroke="white" stroke-width="4" fill="#19aeb8" />
+                <circle cx="1125" cy="290" r="7" fill="white" />
+
+
+                <circle cx="402" cy="320" r="4" fill="white" />
+                <circle cx="422" cy="317" r="4" fill="white" />
+
+                <circle cx="570" cy="270" r="4" fill="white" />
+                <circle cx="600" cy="260" r="4" fill="white" />
+
+                <circle cx="730" cy="335" r="4" fill="white" />
+                <circle cx="780" cy="325" r="4" fill="white" />
+
+                <circle cx="820" cy="250" r="4" fill="white" />
+
+                <circle cx="885" cy="270" r="4" fill="white" />
+
+                <circle cx="960" cy="250" r="4" fill="white" />
+                <circle cx="995" cy="262" r="4" fill="white" />
+
+                <circle cx="1160" cy="320" r="4" fill="white" />
+                <circle cx="1190" cy="280" r="4" fill="white" />
+
+            </g>
+
+        </svg>
+    </div>
+</body>
+<script src="../js/jquery.js"></script>
+<script>
+    $(function () {
+        var svgRootDom = $("#sketchpad")[0];
+        adjustToFreezeWidth(svgRootDom);
+    });
+
+
+    function adjustToFreezeWidth(rootSvg) {
+        var windowWidth = $(window).width();
+
+        var viewBoxVal = rootSvg.getAttribute("viewBox");
+        var viewBoxWidth = viewBoxVal.split(",")[2];
+        var viewBoxHeight = viewBoxVal.split(",")[3];
+        rootSvg.removeAttribute("width");
+        rootSvg.removeAttribute("height");
+
+        var setWidth = windowWidth;
+        var setHeight = (setWidth * viewBoxHeight) / viewBoxWidth;
+        rootSvg.setAttribute("width", setWidth);
+        rootSvg.setAttribute("height", setHeight);
+    }
+
+    function adjustToNone(rootSvg) {
+
+        var viewBoxVal = rootSvg.getAttribute("viewBox");
+        var viewBoxWidth = viewBoxVal.split(",")[2];
+        var viewBoxHeight = viewBoxVal.split(",")[3];
+        rootSvg.removeAttribute("width");
+        rootSvg.removeAttribute("height");
+
+        rootSvg.setAttribute("width", viewBoxWidth);
+        rootSvg.setAttribute("height", viewBoxHeight);
+
+    }
+
+    function adjustToFreezeHeight(rootSvg) {
+
+        var windowHeight = 650;
+        var viewBoxVal = rootSvg.getAttribute("viewBox");
+        var viewBoxWidth = viewBoxVal.split(",")[2];
+        var viewBoxHeight = viewBoxVal.split(",")[3];
+        rootSvg.removeAttribute("width");
+        rootSvg.removeAttribute("height");
+
+        var setHeight = windowHeight;
+        var setWidth = (setHeight * viewBoxWidth) / viewBoxHeight;
+        rootSvg.setAttribute("width", setWidth);
+        rootSvg.setAttribute("height", setHeight);
+    }
+
+    function adjustToFreezeAll() {
+
+        var windowHeight = 650;
+        var windowWidth = 1536;
+
+        rootSvg.removeAttribute("width");
+        rootSvg.removeAttribute("height");
+
+        rootSvg.setAttribute("width", windowWidth);
+        rootSvg.setAttribute("height", windowHeight);
+
+    }
+</script>
+
+</html>

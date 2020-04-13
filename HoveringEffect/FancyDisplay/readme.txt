@@ -1,2 +1,3 @@
-ÊÊÓÃä¯ÀÀÆ÷£º360¡¢FireFox¡¢Chrome¡¢Opera¡¢°ÁÓÎ¡¢ËÑ¹·¡¢ÊÀ½çÖ®´°. ²»Ö§³ÖSafari¡¢IE8¼°ÒÔÏÂä¯ÀÀÆ÷¡£
-À´Ô´£ºÖĞ¹úÕ¾³¤  http://sc.chinaz.com/
+fit:  360ï¼ŒFireFoxï¼ŒChromeï¼ŒOperaï¼ŒSafariï¼ŒIE8
+form: http://sc.chinaz.com/
+tips: HTML5 SVGå¼¹æ€§Tooltipæç¤ºæ¡†ç‰¹æ•ˆ
