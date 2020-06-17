@@ -164,7 +164,9 @@
         adjustToFreezeWidth(svgRootDom);
     });
 
-
+    window.onresize=function(){
+        adjustToFreezeWidth(svgRootDom);
+    }
     function adjustToFreezeWidth(rootSvg) {
         var windowWidth = $(window).width();
 
